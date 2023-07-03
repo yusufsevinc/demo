@@ -1,15 +1,14 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '2.5.5'
-	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'org.springframework.boot' version '2.7.13'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
 group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+apply plugin: 'io.spring.dependency-management'
+version = rootProject.file('VERSION').text.trim()
+sourceCompatibility = '1.8'
 
-java {
-	sourceCompatibility = '1.8'
-}
 
 configurations {
 	compileOnly {
